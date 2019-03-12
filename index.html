@@ -32,10 +32,7 @@ var pitchShift = new Tone.PitchShift().toMaster();
 
 // Create a synth and connect it to the pitch shifter
 var song = new Tone.Sampler({
-"C3" : "path/to/AAP Project 1 - Conrad Hsiang.wav"
-}, function(){
-	//sampler will repitch the closest sample
-	sampler.triggerAttack("D3")
+"C4" : "path/to/AAP Project 1 - Conrad Hsiang.wav"
 })
 
 
@@ -63,7 +60,7 @@ document.querySelector('#playButton').onclick = function() {
   console.log('The play button has been clicked.');
 
   // Play a middle C, which will sound until the stop button is clicked
-  synth.triggerAttack('C4');
+  Sampler.triggerAttack('C4');
 };
 
 // The following block of code will run when the stop button is clicked
@@ -71,7 +68,7 @@ document.querySelector('#stopButton').onclick = function() {
   console.log('The stop button has been clicked.');
 
   // Stop the note from sounding
-  synth.triggerRelease();
+  Sampler.triggerRelease();
 };
 
 </script>
