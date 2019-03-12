@@ -31,16 +31,9 @@
 var pitchShift = new Tone.PitchShift().toMaster();
 
 // Create a synth and connect it to the pitch shifter
-var synth = new Tone.Synth({
-  oscillator: {
-    type: 'sawtooth'
-  },
-  envelope: {
-    attack: 0.01,
-    decay: 0.1,
-    sustain: 0.5,
-    release: 1
-  }
+var song = new Tone.Sampler({
+
+
 }).connect(pitchShift);
 
 // Sample code to load a sound file
